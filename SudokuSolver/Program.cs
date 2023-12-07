@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace SudokuSolver {
   class Program {
@@ -20,6 +21,37 @@ namespace SudokuSolver {
       SudokuBoard board = new SudokuBoard(initialBoard);
 
       bool solved = SudokuSolver.Solve(board);
+            if (solved)
+            {
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0;i< 9;i++) 
+                {
+                    for (int j = 0; j < 9; j++)
+                    {
+                        if ((j) % 3 == 0)
+                        {
+                            if (j % 9 == 0)
+                            {
+                                sb.Append("\n");
+                                if(i % 3 == 0)
+                                {
+                                    sb.Append('\n');
+                                    sb.Append('\n');
+                                }
+                            }
+                            else
+                            {
+                                sb.Append("    ");
+                            }
+
+                        }
+                        sb.Append(board.board[i,j]);
+                        sb.Append(" ");
+                    }
+                }
+                Console.WriteLine(sb);
+                Console.Write("\n");
+            }
       Console.WriteLine($"{(solved ? "SOLVED" : "UNSOLVABLE")}");
     }
   }

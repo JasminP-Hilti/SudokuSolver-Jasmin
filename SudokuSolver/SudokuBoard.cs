@@ -6,8 +6,8 @@ namespace SudokuSolver {
     private readonly int blocks = 3;
     public readonly int size = 9;
 
-    private int[,] board;
-    private bool[,] fixedNumbers;
+    public int[,] board;
+    public bool[,] fixedNumbers;
 
     public SudokuBoard() {
       board = new int[size, size];
