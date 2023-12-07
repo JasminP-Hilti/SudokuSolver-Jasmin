@@ -36,12 +36,11 @@ namespace SudokuSolver {
                                 if(i % 3 == 0)
                                 {
                                     sb.Append('\n');
-                                    sb.Append('\n');
                                 }
                             }
                             else
                             {
-                                sb.Append("    ");
+                                sb.Append("\t");
                             }
 
                         }
