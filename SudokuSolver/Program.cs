@@ -51,7 +51,8 @@ namespace SudokuSolver {
                 Console.WriteLine(sb);
                 Console.Write("\n");
             }
-      Console.WriteLine($"{(solved ? "SOLVED" : "UNSOLVABLE")}");
+      Console.WriteLine($"{(solved ? "SOLVED - YEAH!!! :)" : "UNSOLVABLE - NOOOOO!!! :(")}");
+
     }
   }
 }
